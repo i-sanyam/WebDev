@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Evaluate</title>
+		<script async defer src="script.js"></script>
+	</head>
+	<body>
+		<textarea id="textCode" cols="30" rows="10"></textarea>
+		<br />
+		<button id="btnEncode">Encode</button>
+		<form action="/eval" method="GET">
+			<input
+				style="width: 500px; height: 50px;"
+				id="display"
+				name="code"
+				disbaled
+			/>
+			<br />
+			<button type="button" id="btnEncrypt">Encrypt</button>
+			<br />
+			<button type="submit" id="btnEvaluate">Evaluate</button>
+		</form>
+	</body>
+</html>

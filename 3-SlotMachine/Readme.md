@@ -1,3 +1,3 @@
-#SLOT MACHINE
+*SLOT MACHINE
 
-## Casino Slot Machine with input speed, slows down near completion and alerts results.
+#### Casino Slot Machine with input speed, slows down near completion and alerts results.

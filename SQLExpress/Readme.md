@@ -6,7 +6,7 @@
 
 Start the MySQL service (from Task Manager)
 
-### Linux 
+### Linux
 
 ```shell
 sudo service mysql start
@@ -14,7 +14,7 @@ sudo service mysql start
 
 ### MacOS
 
-Go to Settings > Mysql > Start MySQL Service 
+Go to Settings > Mysql > Start MySQL Service
 
 or (if installed via Homebrew)
 
@@ -24,20 +24,20 @@ mysqld.service start
 
 ## Log in to MySQL as root
 
-Without root password - 
+Without root password -
 
 ```shell
 mysql -u root
-mysql> 
+mysql>
 ```
 
-With root password - 
+With root password -
 
 ```shell
-mysql -u root -p 
-Enter Password: 
+mysql -u root -p
+Enter Password:
 
-mysql> 
+mysql>
 ```
 
 ## Create DB, User, Grant access

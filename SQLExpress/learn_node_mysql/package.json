@@ -1,0 +1,15 @@
+{
+  "name": "learn_node_mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cli_insert_data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sanyam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0"
+  }
+}

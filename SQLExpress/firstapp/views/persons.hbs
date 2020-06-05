@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persons</title>
+</head>
+
+<body>
+    <a href="/add">Add Person</a>
+    <br>
+    <br>
+    <table cellpadding='4' cellspacing='1' border='2'>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        {{#each persons as |person|}}
+        <tr>
+            <th>{{person.name}}</th>
+            <th>{{person.age}}</th>
+            <th>{{person.city}}</th>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+
+</html>

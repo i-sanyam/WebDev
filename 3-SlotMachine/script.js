@@ -23,15 +23,14 @@ function speedChange(newSpeed) {
 		v1.innerHTML = getRandomVal();
 		v2.innerHTML = getRandomVal();
 		v3.innerHTML = getRandomVal();
-		if (count == iterations - 15) {
+		if (count == iterations - 20) {
 			document.documentElement.style.setProperty("--speed", 1);
-			console.log("Slow Down");
+			console.log("Slow Down at ", count);
 		}
-
 		if (count == iterations) {
 			clearInterval(loop);
 			document.documentElement.style.setProperty("--iterations", 0);
-			console.log("Values static");
+			console.log("Values static at ", count);
 			btnAgain.hidden = false;
 			alert(score());
 		}

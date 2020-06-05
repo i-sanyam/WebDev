@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+    <link href="form.css" rel="stylesheet">
+</head>
+
+<body>
+<h1>Application Form</h1>
+<h3>Please provide the following info to apply</h3>
+<form>
+    <label>
+        <span>Full Name*</span>
+        <input class="name" name="first-name" placeholder="First Name">
+        <input class="name" name="second-name" placeholder="Last Name">
+    </label>
+    <br>
+    <table>
+        <tr>
+            <td class = "block">
+                Current Address*:
+            </td>
+            <td class = "block">
+                <table>
+                    <tr>
+                        <input class="address full-line" name="street-address-1" placeholder="Street Address">
+                    </tr>
+                    <tr>
+                        <input class="address full-line" name="street-address-2" placeholder="Street Address Line 2">
+                    </tr>
+                    <tr class = "full-line">
+                        <td><input class="address semi-line" name="city" placeholder="City"></td>
+                        <td><input class="pincode semi-line" name="pincode" placeholder="Pincode"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="address semi-line" name="state" placeholder="State"></td>
+                    <td><select class="address semi-line" name="country" autocomplete name="country">
+                        <option>--Select Country--</option>
+                        <option>India</option>
+                        <option>Pakistan</option>
+                        <option>Nepal</option>
+                        <option>Others</option>
+                    </select></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <label>
+        <span>Email Address*</span>
+        <input name="email" class="address" placeholder="Your E-mail">
+    </label>
+    <br>
+    <label>
+        <span>Phone Number*</span>
+        <input name="phone" class="address" type="tel" placeholder="123456789">
+    </label>
+    <br>
+    <label>
+        <span>Applying for position:</span>
+        <select>
+            <option>--Choose Role--</option>
+            <option>SDE-1</option>
+            <option>SDE-2</option>
+            <option>Associate SDE</option>
+            >
+        </select>
+    </label>
+    <br>
+    <label>
+        <span>Start Date</span>
+        <input type="date">
+    </label>
+    <br>
+    <label>
+        <span>Upload Resume</span>
+        <input id="resume" name="resume" type="file">
+    </label>
+    <br>
+    <button>Submit!</button>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+body, input, select
+{
+    background-color: ghostwhite;
+    font-size: 14pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input,select,button
+{
+    padding-top:10px;
+    font-size: 14pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+}
+
+.full-line
+{
+    width: 70%;
+}
+.semi-line
+{
+    /*padding: 0px;*/
+}
+button
+{
+    display: flex;
+    width:100px;
+    height: 40px;
+    background-color:dodgerblue;
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 14pt;
+    align-content: center;
+    justify-content: center;
+}
+button:hover
+{
+    background-color:green;
+}
+.block
+{
+    padding: 10px;
+}

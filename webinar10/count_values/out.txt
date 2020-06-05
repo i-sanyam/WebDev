@@ -1,0 +1,6 @@
+bear: 81155
+cat: 81222
+dog: 81382
+donkey: 81401
+monkey: 81758
+zebra: 81462

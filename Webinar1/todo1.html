@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+</style>
+<title>ToDoList</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+ToDoList
+<br>
+<input id = "newtask"><button id = "btn">ADD</button>
+<br>
+<ul id = "tasklist">
+
+</ul>
+</body>
+<script>
+    // let pressbtn = document.getElementById("btn")
+    // let ipt = document.getElementById("newtask")
+    // let todolist = document.getElementById("tasklist")
+    // pressbtn.onclick = function () {
+    //
+    //         let toput = ipt.value
+    //         let newItem = document.createElement("li");
+    //         newItem.innerText = toput;
+    //         todolist.appendChild(newItem);
+    // }
+    let pressbtn = document.getElementById("btn")
+    let todolist = document.getElementById("tasklist")
+    pressbtn.onclick = function() {
+
+        let startTime = new Date().getTime()
+        // console.log(startTime)
+
+        let ctr3 = 3;
+        let ctr5 = 5;
+        for(let i = 1; i <= 100; i++)
+        {
+            let toput = "";
+            if (i == ctr3) {
+                toput += "fix"
+                ctr3 += 3;
+            }
+            if (i == ctr5) {
+                toput += "bix"
+                ctr5 += 5;
+            }
+            if (toput == "") toput = i;
+            let newitem = document.createElement("li");
+            newitem.innerText = toput;
+            // todolist.appendChild(newitem);
+            todolist.innerHTML += "<li>"+ toput + "</li>"
+        }
+        let stoptime = new Date().getTime()
+        // console.log(stoptime)
+        console.log(stoptime - startTime)
+    }
+</script>
+</html>

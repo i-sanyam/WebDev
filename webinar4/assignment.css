@@ -1,0 +1,23 @@
+/* .box
+{
+    background-color: cyan;
+}
+
+.box:hover
+{
+    background-color:red;
+} */
+
+li:hover
+{
+    background-color: black;
+    color: white;
+}
+li > ul
+{
+    display:none;
+}
+li:hover > ul
+{
+    display: block;
+}

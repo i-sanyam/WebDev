@@ -1,0 +1,9 @@
+*
+{
+    color: red;
+}
+p
+{
+    color: green;
+    /* overwrite is possible */
+}

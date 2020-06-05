@@ -1,0 +1,15 @@
+.box{
+    width: 100px;
+    height: 100px;
+    color: orange;
+    background-color: slategray;
+}
+.box:hover{
+    background-color: springgreen;
+    color: black;
+}
+.box:active{
+    width: 200px;
+    height: 200px;
+    font-size: 25pt;
+}

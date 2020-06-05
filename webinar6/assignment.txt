@@ -1,0 +1,5 @@
+**try to use a little bit of css by hand to get a better gist, otherwise using bootstrap is must**
+responsivee websites for desktop and mobile-platforms-
+1. Build a  e-commerce website
+2. coding blocks admission form
+3. resume/portfolio

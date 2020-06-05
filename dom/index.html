@@ -1,0 +1,27 @@
+ <!-- DOM Traverse, Replace, Remover were tried here -->
+
+<!DOCTYPE html>
+<html>
+    <head><script>
+        function load() {
+          console.log("load event detected!");
+        }
+        window.onload = load;
+      </script></head>
+<body>
+
+<h1>A list inside another list</h1>
+
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+
+</body>
+</html>

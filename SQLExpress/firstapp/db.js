@@ -19,8 +19,8 @@ function getAllPersons() {
 function addPerson(person) {
 	return new Promise((resolve, reject) => {
 		connection.query(
-			`INSERT INTO persons
-			(name, age, city) values ('${person.name}', ${person.age}, '${person.city}')`,
+			`INSERT INTO persons (name, age, city) VALUES (?,?,?)`,
+			[person.name, person.age, person.city],
 			(err, rows, cols) => {
 				if (err) reject(err);
 				else resolve(rows);

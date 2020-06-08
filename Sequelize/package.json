@@ -1,0 +1,19 @@
+{
+  "name": "sequelize-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/i-sanyam/WebDev.git"
+  },
+  "author": "Sanyam",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.12"
+  }
+}

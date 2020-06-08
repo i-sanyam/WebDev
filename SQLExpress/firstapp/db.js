@@ -23,7 +23,7 @@ function addPerson(person) {
 			[person.name, person.age, person.city],
 			(err, rows, cols) => {
 				if (err) reject(err);
-				else resolve(rows);
+				else resolve();
 			}
 		);
 	});

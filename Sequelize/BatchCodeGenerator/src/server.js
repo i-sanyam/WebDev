@@ -21,7 +21,13 @@ app.get("/batchcode", async (req, res) => {
 
 app.get("/batch", async (req, res) => {
 	try {
-		const batches = await Batch.findAll();
+		const batches = await Batch.findAll({
+			include: [Course, Season, Center],
+		});
+		batches.forEach((b) => {
+			b.cleanStartDate = JSON.stringify(b.start).substr(1, 10);
+			b.cleanEndDate = JSON.stringify(b.end).substr(1, 10);
+		});
 		res.render("batch", { batches });
 	} catch (e) {
 		console.error(e);
@@ -48,8 +54,6 @@ app.post("/batchcode", async (req, res) => {
 			},
 			{ ignoreDuplicates: true }
 		);
-		// res.send(batch.code);
-		// app.redirect("/batch");
 		res.redirect("/batch");
 	} catch (error) {
 		console.error(error);

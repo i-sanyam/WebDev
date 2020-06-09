@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Code</title>
+</head>
+
+<body>
+    <h1>Generate Batch Code</h1>
+    <form action="/batchcode" method="POST">
+        <label for="selectCenter">Center</label>
+        <select name="center" id="selectCenter">
+            {{#each centers as |c|}}
+            <option value="{{c.id}}">{{c.name}}</option>
+            {{/each}}
+        </select>
+        <br>
+        <label for="selectCourse">Course</label>
+        <select name="course" id="selectCourse">
+            {{#each courses as |c|}}
+            <option value="{{c.id}}">{{c.name}}</option>
+            {{/each}}
+        </select>
+        <br>
+        <label for="selectSeason">Season</label>
+        <select name="season" id="selectSeason">
+            {{#each seasons as |s|}}
+            <option value="{{s.id}}">{{s.name}}</option>
+            {{/each}}
+        </select>
+        <br>
+        <label for="selectYear">Year</label>
+        <select name="year" id="selectYear">
+            {{#each years as |y|}}
+            <option value="{{y}}">{{y}}</option>
+            {{/each}}
+        </select>
+        <br>
+        <label for="inpBatch">Batch Number</label>
+        <input type="number" required name="batchnumber" id="inpBatch" min="1" max="5">
+        <br>
+        <label for="inpStartDate">Start Date</label>
+        <input required type="date" name="startdate" id="inpStartDate">
+        <label for="inpEndDate">End Date</label>
+        <input required type="date" name="enddate" id="inpEndDate">
+        <br>
+        <input type="reset">
+        <input type="submit" name="submit" id='btnSubmit' value="Generate Code">
+    </form>
+</body>
+
+</html>

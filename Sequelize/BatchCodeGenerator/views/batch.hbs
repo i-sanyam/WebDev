@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch</title>
+</head>
+
+<body>
+    <h1>Batches at a Glance</h1>
+    <table border="2" cellpadding="2">
+        <thead>
+            <th>Code</th>
+            <th>Course</th>
+            <th>Center</th>
+            <th>Year</th>
+            <th>Season</th>
+            <th>Duration</th>
+        </thead>
+        <tbody>
+            {{#each batches as |batch|}}
+            <tr>
+                <td>{{batch.code}}</td>
+                <td>{{batch.course.name}}</td>
+                <td>{{batch.center.name}}, {{batch.center.city}}</td>
+                <td>{{batch.year}}</td>
+                <td>{{batch.season.name}}</td>
+                <td>{{batch.cleanStartDate}} to<br>{{batch.cleanEndDate}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <br>
+    <a href="/batchcode">Add Batch</a>
+</body>
+
+</html>

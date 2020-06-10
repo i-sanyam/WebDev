@@ -38,6 +38,7 @@ bower_components
 build/Release
 
 # Dependency directories
+readme SQL Server FOREIGN KEY_files/
 node_modules/
 jspm_packages/
 

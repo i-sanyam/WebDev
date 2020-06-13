@@ -11,7 +11,20 @@ route.get("/", (req, res) => {
 		});
 });
 
+route.post("/login", (req, res) => {
+	const found = User.findAll({ where: { name: req.body.username } })
+		.then((user) => {
+			// console.log(user);
+			res.status(201).send(user);
+		})
+		.catch((err) => {
+			res.status(400).send({ error: "Could not search database" });
+		});
+});
+
 route.post("/", (req, res) => {
+	// const findIfUserExist = User.findAll({ where: { name: req.body.name } });
+	// console.log(findIfUserExist);
 	User.create({
 		name: req.body.name,
 	})

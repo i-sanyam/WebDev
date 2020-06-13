@@ -7,12 +7,13 @@ route.get("/", (req, res) => {
 			res.status(200).send(products);
 		})
 		.catch((e) => {
-			res.status(500).send({ error: "Could not Retreive Products" });
+			res.status(400).send({ error: "Could not Retreive Products" });
 		});
 });
 
 route.post("/", (req, res) => {
 	// validate price
+	// console.log(req.body);
 	if (isNaN(parseFloat(req.body.price))) {
 		return res.status(403).send({ error: "Invalid Price" });
 	}
@@ -27,7 +28,7 @@ route.post("/", (req, res) => {
 			res.status(201).send(product);
 		})
 		.catch((e) => {
-			res.status(501).send({ error: "Could not add new product" });
+			res.status(403).send({ error: "Could not add new product" });
 		});
 });
 

@@ -5,6 +5,15 @@ async function createAnnonUser() {
 	return user;
 }
 
+async function getUserById(id) {
+	const user = await Users.findOne({ where: { id } });
+	return user;
+}
+async function getUserByName(username) {
+	const user = await Users.findOne({ where: { username } });
+	return user;
+}
+
 /* test command */
 /*
  async function task() {
@@ -17,4 +26,4 @@ async function createAnnonUser() {
 task();
 */
 
-exports = module.exports = { createAnnonUser };
+exports = module.exports = { createAnnonUser, getUserById, getUserByName };

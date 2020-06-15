@@ -1,6 +1,9 @@
 const Express = require("express");
 const app = Express();
 
+app.use(Express.json());
+app.use(Express.urlencoded({ extended: true }));
+
 const { db } = require("./db/models");
 const { userRoute } = require("./routes/users");
 const { postRoute } = require("./routes/posts");

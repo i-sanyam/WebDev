@@ -16,3 +16,5 @@ async function createAnnonUser() {
 }
 task();
 */
+
+exports = module.exports = { createAnnonUser };

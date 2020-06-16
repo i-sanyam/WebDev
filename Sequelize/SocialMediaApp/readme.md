@@ -12,12 +12,31 @@ mysql> flush privileges;
 
 ## Project Structure
 
+### Backend (Server Side)
+
 ```sh
 src
 ├───controllers     # connect routes to db operations
 ├───db              # database connections and model definitions
 ├───public          # html/css/js for static part of the site
 └───routes          # express middlewares (route wise)
+```
+
+### Frontend (Code @Client Side)
+
+```sh
+\SOCIALMEDIAAPP\SRC\PUBLIC
+│   index.html                #home/first page
+├───app                       # own scripts
+│       socialcommon.js
+├───components                #own html components
+│       navbar.html
+└───css                       #css libraries used
+        bootstrap.css
+└───js                        #js libraries used
+        bootstrap.js
+        jquery.js
+        popper.js
 ```
 
 ## Business Logic

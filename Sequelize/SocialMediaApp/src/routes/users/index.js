@@ -29,7 +29,12 @@ route.get("/search/:id", async (req, res) => {
 });
 
 route.post("/", async (req, res) => {
-	const user = await createAnnonUser();
+	let user;
+	while (!user) {
+		console.log("try");
+		user = await createAnnonUser();
+	}
+	// console.log(user);
 	res.status(201).send(user);
 });
 

@@ -43,9 +43,18 @@ const NAMES = [
 ];
 
 function randomUsernameGen() {
-	const adj = ADJECTIVES[Math.floor(Math.random() * ADJECTIVES.length) - 1];
-	const name = NAMES[Math.floor(Math.random() * NAMES.length) - 1];
+	const adjidx = Math.floor(Math.random() * (ADJECTIVES.length - 1));
+	const nameidx = Math.floor(Math.random() * (NAMES.length - 1));
+	const adj = ADJECTIVES[adjidx];
+	const name = NAMES[nameidx];
+	console.log(
+		"Adj length: " + ADJECTIVES.length,
+		adjidx,
+		"Names length: " + NAMES.length,
+		nameidx
+	);
 	return `${adj}-${name}`;
+	// return "breezy-elijah";
 }
 
 exports = module.exports = { randomUsernameGen };

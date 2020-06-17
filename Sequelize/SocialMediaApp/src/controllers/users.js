@@ -1,8 +1,18 @@
 const { randomUsernameGen } = require("../utils/username");
 const { Users } = require("../db/models");
 async function createAnnonUser() {
-	const user = await Users.create({ username: randomUsernameGen() });
-	return user;
+	const user = await Users.create({
+		username: randomUsernameGen(),
+	}).catch((err) => {
+		console.log("error");
+		if (err.parent.code == "ER_DUP_ENTRY") {
+			console.error("unique not");
+		}
+	});
+	if (user) {
+		// console.log("returning");
+		return user;
+	}
 }
 
 async function getUserById(id) {

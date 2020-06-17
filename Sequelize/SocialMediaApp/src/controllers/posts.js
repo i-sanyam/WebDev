@@ -7,7 +7,7 @@ async function createNewPost(userId, title, body) {
 }
 
 /**
- * USAGE of showPosts func.
+ * USAGE of getAllPosts func.
  * **search by username**
  * showPosts({username: ""})
  * **search by title**

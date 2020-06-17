@@ -3,10 +3,12 @@
 	background-color: var(--light);
 	position: sticky;
 	bottom: 0px;
+	z-index: 1;
 }
 #navbar {
 	position: sticky;
 	top: 0px;
+	z-index: 1;
 }
 #body {
 	height: 2000px;

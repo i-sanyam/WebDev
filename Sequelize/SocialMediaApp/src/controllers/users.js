@@ -10,7 +10,7 @@ async function createAnnonUser() {
 		}
 	});
 	if (user) {
-		// console.log("returning");
+		// console.log(user);
 		return user;
 	}
 }

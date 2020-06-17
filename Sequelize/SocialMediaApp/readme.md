@@ -28,8 +28,11 @@ src
 \SOCIALMEDIAAPP\SRC\PUBLIC
 │   index.html                #home/first page
 ├───app                       # own scripts
+│       common.css
+│       loginIfNeeded.js
 │       socialcommon.js
 ├───components                #own html components
+│       footer.html
 │       navbar.html
 └───css                       #css libraries used
         bootstrap.css

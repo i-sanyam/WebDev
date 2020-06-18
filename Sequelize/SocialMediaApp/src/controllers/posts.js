@@ -13,13 +13,25 @@ async function createNewPost(userId, title, body) {
  * **search by title**
  * showPosts({title: ""})
  */
-async function getAllPosts(query) {
+async function getAllPosts(userId) {
 	// TO DO support query params
-	const posts = await Posts.findAll({
-		include: [Users],
-	});
-	return posts;
+	// console.log("userId ", userId);
+	if (userId) {
+		const posts = await Posts.findAll({
+			where: { userId },
+			include: [Users],
+		});
+		return posts;
+	} else {
+		// console.log("else block");
+		const posts = await Posts.findAll({
+			include: [Users],
+		});
+		return posts;
+	}
 }
+
+// async function getPostById()
 
 /*******TEST CODE *******/
 /* async function testTask() {

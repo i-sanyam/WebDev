@@ -1,5 +1,5 @@
 function loginIfNeeded() {
-	let currentUser = window.localStorage.socialmediauser
+	currentUser = window.localStorage.socialmediauser
 		? JSON.parse(window.localStorage.socialmediauser)
 		: null;
 	if (!currentUser) {
@@ -7,9 +7,11 @@ function loginIfNeeded() {
 			// console.log(user);
 			window.localStorage.socialmediauser = JSON.stringify(user);
 			currentUser = user;
+			window.currentUser = user;
 			$("#nav-username").text(currentUser.username);
 		});
 	} else {
+		window.currentUser = currentUser;
 		$("#nav-username").text(currentUser.username);
 	}
 

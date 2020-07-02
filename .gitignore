@@ -115,10 +115,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-<<<<<<< HEAD
-#Mongo
+
+
 MongoDB/Basics/data/
-=======
-#Mongo Data
-MongoDB/**/data
->>>>>>> 36d775c38b08acfce42e2fe43343240b804ed021
+
